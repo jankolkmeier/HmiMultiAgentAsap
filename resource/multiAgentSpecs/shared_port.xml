@@ -1,0 +1,13 @@
+<SharedPortLoader id="sharedPort1">
+  <BMLParser>
+    <BMLAttributeExtension class="asap.bml.ext.bmla.BMLABMLBehaviorAttributes"/>
+  </BMLParser>
+  <MultiAgentBMLScheduler>
+    <SchedulingHandler class="asap.realizer.scheduler.BMLASchedulingHandler" schedulingStrategy="asap.realizer.scheduler.SortedSmartBodySchedulingStrategy"/>
+  </MultiAgentBMLScheduler>
+  <PipeLoader id="pipe" loader="asap.middlewareadapters.loader.MiddlewareToBMLRealizerAdapterLoader">
+    <MiddlewareOptions loaderclass="nl.utwente.hmi.middleware.udp.UDPMultiClientMiddlewareLoader">
+      <MiddlewareProperty name="port" value="6662"/>
+    </MiddlewareOptions>
+  </PipeLoader>
+</SharedPortLoader>

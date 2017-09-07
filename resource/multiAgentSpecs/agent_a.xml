@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<AsapVirtualHuman id="agent_a">
+  <Loader id="realizer" loader="asap.realizerembodiments.MultiAgentAsapRealizerEmbodiment">
+    <SharedPort id="sharedPort1" />
+  </Loader>
+  <Loader id="unityembodiment" loader="hmi.unityembodiments.loader.UnityEmbodimentLoader">
+    <SharedMiddleware id="sharedMiddleware1" />
+  </Loader>
+  <Loader id="faceengine" loader="asap.faceengine.loader.FaceEngineLoader" requiredloaders="unityembodiment">
+    <FaceBinding basedir="" resources="Humanoids/toonFace/facebinding/" filename="facebinding.xml"/>
+  </Loader>
+  <Loader id="facelipsync" requiredloaders="faceengine" loader="asap.faceengine.loader.TimedFaceUnitLipSynchProviderLoader">
+    <MorphVisemeBinding resources="Humanoids/toonFace/facebinding/" filename="visemebinding_disney.xml"/>
+  </Loader>
+  <Loader id="ttsbinding" loader="asap.marytts5binding.loader.MaryTTSBindingLoader">
+    <PhonemeToVisemeMapping resources="Humanoids/shared/phoneme2viseme/" filename="sampaen2disney.xml"/>
+  </Loader>
+  <Loader id="speechengine" loader="asap.speechengine.loader.SpeechEngineLoader" requiredloaders="facelipsync,ttsbinding">
+    <Voice factory="WAV_TTS" voicename="dfki-prudence"/>
+  </Loader>
+</AsapVirtualHuman>
