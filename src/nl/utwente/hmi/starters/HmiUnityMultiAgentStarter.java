@@ -30,8 +30,8 @@ public class HmiUnityMultiAgentStarter {
     public void init() throws IOException {
         String shared_port = "multiAgentSpecs/shared_port.xml";
         String shared_middleware = "multiAgentSpecs/shared_middleware.xml";
-        String spec_a = "multiAgentSpecs/agent_a.xml";
-        String spec_b = "multiAgentSpecs/agent_b.xml";
+        String spec_a = "multiAgentSpecs/uma/UMA_F.xml";
+        String spec_b = "multiAgentSpecs/uma/UMA_M.xml";
         String resources = "";
         
         MixedAnimationEnvironment mae = new MixedAnimationEnvironment();
@@ -47,7 +47,7 @@ public class HmiUnityMultiAgentStarter {
         ArrayList<Environment> environments = new ArrayList<Environment>();
         final AsapEnvironment ee = new AsapEnvironment();
         
-        ClockDrivenCopyEnvironment ce = new ClockDrivenCopyEnvironment(1000 / 10);
+        ClockDrivenCopyEnvironment ce = new ClockDrivenCopyEnvironment(1000 / 30);
 
         ce.init();
         ope.init();
