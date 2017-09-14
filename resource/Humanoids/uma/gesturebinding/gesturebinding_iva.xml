@@ -33,18 +33,94 @@
       </parameterdefaults>
     <RestGaze type="class" class="asap.animationengine.gaze.DynamicRestGaze"/>
   </RestGazeSpec>
+
   <RestPoseSpec>
     <constraints>
-      <constraint name="stance" value="TEST"/>
+      <constraint name="ARMS" value="ON_TABLE"/>
+      <constraint name="stance" value="SITTING"/>
     </constraints>
-    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/resthips.xml"/>
+    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/sitting_arms_on_table.xml"/>
   </RestPoseSpec>
+
+  <RestPoseSpec>
+    <constraints>
+      <constraint name="RIGHT_ARM" value="ON_TABLE"/>
+      <constraint name="stance" value="SITTING"/>
+    </constraints>
+    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/sitting_right_arm_on_table.xml"/>
+  </RestPoseSpec>
+
+  <RestPoseSpec>
+    <constraints>
+      <constraint name="LEFT_ARM" value="ON_TABLE"/>
+      <constraint name="stance" value="SITTING"/>
+    </constraints>
+    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/sitting_left_arm_on_table.xml"/>
+  </RestPoseSpec>
+
+  <RestPoseSpec>
+    <constraints>
+      <constraint name="POSITION" value="POSITION_TABLE_LEFT"/>
+      <constraint name="stance" value="SITTING"/>
+    </constraints>
+    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/position_table_left.xml"/>
+  </RestPoseSpec>
+
+  <RestPoseSpec>
+    <constraints>
+      <constraint name="POSITION" value="POSITION_TABLE_CENTER"/>
+      <constraint name="stance" value="SITTING"/>
+    </constraints>
+    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/position_table_center.xml"/>
+  </RestPoseSpec>
+
+  <RestPoseSpec>
+    <constraints>
+      <constraint name="POSITION" value="POSITION_TABLE_RIGHT"/>
+      <constraint name="stance" value="SITTING"/>
+    </constraints>
+    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/position_table_right.xml"/>
+  </RestPoseSpec>
+
+  <RestPoseSpec>
+    <constraints>
+      <constraint name="POSITION" value="POS0"/>
+      <constraint name="stance" value="STANDING"/>
+    </constraints>
+    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/position0.xml"/>
+  </RestPoseSpec>
+
+  <RestPoseSpec>
+    <constraints>
+      <constraint name="POSITION" value="POS1"/>
+      <constraint name="stance" value="STANDING"/>
+    </constraints>
+    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/position1.xml"/>
+  </RestPoseSpec>
+
+  <RestPoseSpec>
+    <constraints>
+      <constraint name="POSITION" value="POS2"/>
+      <constraint name="stance" value="STANDING"/>
+    </constraints>
+    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/position2.xml"/>
+  </RestPoseSpec>
+
+  <RestPoseSpec>
+    <constraints>
+      <constraint name="stance" value="SITTING"/>
+    </constraints>
+    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/coc_sit_1.xml"/>
+  </RestPoseSpec>
+
+  <!--
   <RestPoseSpec>
     <constraints>
       <constraint name="stance" value="STANDING"/>
     </constraints>
     <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/resthips.xml"/>
   </RestPoseSpec>
+  -->
   <MotionUnitSpec type="gesture">
     <constraints>
       <constraint name="lexeme" value="breathe"/>

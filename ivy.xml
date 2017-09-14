@@ -70,6 +70,7 @@
     <dependency org="Asap" name="BmlScripts" rev="latest.${resolve.status}"/>
     <dependency org="marytts" name="voice-dfki-prudence" rev="latest.release"/>
     <dependency org="marytts" name="voice-dfki-obadiah"       rev="latest.release"  />
+    <dependency org="marytts" name="voice-dfki-spike"       rev="latest.release"  />
     <!-- female english voices
     <dependency org="marytts" name="voice-dfki-poppy-hsmm"       rev="latest.release"  />
     <dependency org="marytts" name="voice-dfki-poppy"       rev="latest.release"  />

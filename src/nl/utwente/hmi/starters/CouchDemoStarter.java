@@ -17,21 +17,24 @@ import saiba.bml.core.FaceLexemeBehaviour;
 import saiba.bml.core.HeadBehaviour;
 import saiba.bml.core.PostureShiftBehaviour;
 
-public class HmiUnityMultiAgentStarter {
+public class CouchDemoStarter {
 
     public static void main(String[] args) throws IOException {
-    	HmiUnityMultiAgentStarter umas = new HmiUnityMultiAgentStarter();
-    	umas.init();
+    	CouchDemoStarter cds = new CouchDemoStarter();
+    	cds.init();
     }
 
-    public HmiUnityMultiAgentStarter() {
+    public CouchDemoStarter() {
     }
 
     public void init() throws IOException {
         String shared_port = "multiAgentSpecs/shared_port.xml";
         String shared_middleware = "multiAgentSpecs/shared_middleware.xml";
-        String spec_a = "multiAgentSpecs/uma/UMA_F.xml";
-        String spec_b = "multiAgentSpecs/uma/UMA_M.xml";
+        String[] specs = new String[] {
+        		"multiAgentSpecs/uma/COUCH_M_1.xml",
+        		"multiAgentSpecs/uma/COUCH_M_2.xml",
+        		"multiAgentSpecs/uma/COUCH_F_1.xml"
+        };
         String resources = "";
         
         MixedAnimationEnvironment mae = new MixedAnimationEnvironment();
@@ -73,8 +76,9 @@ public class HmiUnityMultiAgentStarter {
         ee.init(environments, spl.getSchedulingClock());
         ope.addPrePhysicsCopyListener(ee);
         
-        ee.loadVirtualHuman(resources, spec_a, "AsapRealizer agent_a");
-        //ee.loadVirtualHuman(resources, spec_b, "AsapRealizer agent_b");
+        for (String spec : specs) {
+            ee.loadVirtualHuman(resources, spec, "AsapRealizer: "+spec);
+        }
 
         ope.startPhysicsClock();
     }

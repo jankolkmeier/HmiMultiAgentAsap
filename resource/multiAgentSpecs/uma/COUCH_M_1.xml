@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AsapVirtualHuman id="UMA_M">
+<AsapVirtualHuman id="COUCH_M_1">
   <Loader id="realizer" loader="asap.realizerembodiments.MultiAgentAsapRealizerEmbodiment">
     <SharedPort id="sharedPort"/>
   </Loader>
@@ -22,7 +22,7 @@
   <Loader id="animationengine" loader="asap.animationengine.loader.MixedAnimationEngineLoader" requiredloaders="mixedskeletonembodiment,physicalembodiment">
     <GestureBinding basedir="" resources="" filename="Humanoids/uma/gesturebinding/gesturebinding_iva.xml"/>
     <StartPose>
-      <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/resthips.xml"/>
+      <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/position_table_left.xml"/>
     </StartPose>
     <Hns resources="Humanoids/armandia/hns" filename="hns_armandia.xml"/>
     <HnsHandShape dir="Humanoids/shared/handshapes"/>
@@ -37,7 +37,7 @@
     <PhonemeToVisemeMapping resources="Humanoids/shared/phoneme2viseme/" filename="sampaen2disney.xml"/>
   </Loader>
   <Loader id="speechengine" loader="asap.speechengine.loader.SpeechEngineLoader" requiredloaders="facelipsync,ttsbinding">
-    <Voice factory="WAV_TTS" voicename="dfki-obadiah"/>
+    <Voice factory="WAV_TTS" voicename="dfki-spike"/>
   </Loader>
   <Loader id="breathingengine" loader="asap.emitterengine.loader.EmitterEngineLoader">
     <EmitterInfo class="asap.breathingemitter.BreathingEmitterInfo"/>
@@ -45,5 +45,4 @@
   <Loader id="blinkengine" loader="asap.emitterengine.loader.EmitterEngineLoader">
     <EmitterInfo class="asap.blinkemitter.BlinkEmitterInfo"/>
   </Loader>
-  <Loader id="audioengine" loader="asap.audioengine.loader.AudioEngineLoader"/>
 </AsapVirtualHuman>
