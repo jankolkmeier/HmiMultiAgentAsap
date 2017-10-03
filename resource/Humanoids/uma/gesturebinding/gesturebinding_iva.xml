@@ -21,6 +21,7 @@
     <MotionUnit type="Gesture" class="asap.animationengine.procanimation.ProcAnimationGestureMU"/>
   </MotionUnitSpec>
   <!-- HAND SHAPES END -->
+
   <RestGazeSpec>
     <constraints/>
     <parametermap>
@@ -60,26 +61,32 @@
 
   <RestPoseSpec>
     <constraints>
-      <constraint name="POSITION" value="POSITION_TABLE_LEFT"/>
+      <constraint name="POSITION" value="TABLE_LEFT"/>
       <constraint name="stance" value="SITTING"/>
     </constraints>
-    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/position_table_left.xml"/>
+    <!--<RestPose type="SkeletonPose" file="Humanoids/uma/restposes/position_table_left.xml"/>
+         -->
+    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/couch_rest_m_1.xml"/>
   </RestPoseSpec>
 
   <RestPoseSpec>
     <constraints>
-      <constraint name="POSITION" value="POSITION_TABLE_CENTER"/>
+      <constraint name="POSITION" value="TABLE_CENTER"/>
       <constraint name="stance" value="SITTING"/>
     </constraints>
-    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/position_table_center.xml"/>
+    <!--<RestPose type="SkeletonPose" file="Humanoids/uma/restposes/position_table_center.xml"/>
+         -->
+    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/couch_rest_m_2.xml"/>
   </RestPoseSpec>
 
   <RestPoseSpec>
     <constraints>
-      <constraint name="POSITION" value="POSITION_TABLE_RIGHT"/>
+      <constraint name="POSITION" value="TABLE_RIGHT"/>
       <constraint name="stance" value="SITTING"/>
     </constraints>
-    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/position_table_right.xml"/>
+    <!--<RestPose type="SkeletonPose" file="Humanoids/uma/restposes/position_table_right.xml"/>
+         -->
+    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/couch_rest_f_1.xml"/>
   </RestPoseSpec>
 
   <RestPoseSpec>
@@ -104,13 +111,6 @@
       <constraint name="stance" value="STANDING"/>
     </constraints>
     <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/position2.xml"/>
-  </RestPoseSpec>
-
-  <RestPoseSpec>
-    <constraints>
-      <constraint name="stance" value="SITTING"/>
-    </constraints>
-    <RestPose type="SkeletonPose" file="Humanoids/uma/restposes/coc_sit_1.xml"/>
   </RestPoseSpec>
 
   <!--
