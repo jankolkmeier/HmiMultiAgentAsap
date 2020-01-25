@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <AsapVirtualHuman id="agent_b">
   <Loader id="realizer" loader="asap.realizerembodiments.MultiAgentAsapRealizerEmbodiment">
-    <SharedPort id="sharedPort1"/>
+    <SharedPort id="sharedPort"/>
   </Loader>
   <Loader id="unityembodiment" loader="hmi.unityembodiments.loader.UnityEmbodimentLoader">
     <SharedMiddleware id="sharedMiddleware1"/>

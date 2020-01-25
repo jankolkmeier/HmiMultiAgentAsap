@@ -40,6 +40,7 @@
     <dependency org="HMI" name="HmiEnvironmentBase" rev="latest.${resolve.status}"/>
     <dependency org="HMI" name="HmiFaceGraphics" rev="latest.${resolve.status}"/>
     <dependency org="HMI" name="HmiFaceEmbodiments" rev="latest.${resolve.status}"/>
+    <dependency org="HMI" name="HmiFaceAnimation" rev="latest.${resolve.status}"/>
     <dependency org="HMI" name="HmiHeadAndGazeEmbodiments" rev="latest.${resolve.status}"/>
     <dependency org="HMI" name="HmiTextEmbodiments" rev="latest.${resolve.status}"/>
     <dependency org="HMI" name="HmiMixedAnimationEnvironment" rev="latest.${resolve.status}"/>

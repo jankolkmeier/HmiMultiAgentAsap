@@ -30,8 +30,9 @@ public class HmiUnityMultiAgentStarter {
     public void init() throws IOException {
         String shared_port = "multiAgentSpecs/shared_port.xml";
         String shared_middleware = "multiAgentSpecs/shared_middleware.xml";
-        String spec_a = "multiAgentSpecs/uma/UMA_F.xml";
-        String spec_b = "multiAgentSpecs/uma/UMA_M.xml";
+
+        // TODO: make this a list (cmd) param
+        String spec = "Humanoids/borg/borgMocapTest.xml";
         String resources = "";
         
         MixedAnimationEnvironment mae = new MixedAnimationEnvironment();
@@ -73,8 +74,7 @@ public class HmiUnityMultiAgentStarter {
         ee.init(environments, spl.getSchedulingClock());
         ope.addPrePhysicsCopyListener(ee);
         
-        ee.loadVirtualHuman(resources, spec_a, "AsapRealizer agent_a");
-        //ee.loadVirtualHuman(resources, spec_b, "AsapRealizer agent_b");
+        ee.loadVirtualHuman(resources, spec, "AsapRealizer Borg "+spec);
 
         ope.startPhysicsClock();
     }
